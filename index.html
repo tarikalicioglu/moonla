@@ -119,7 +119,7 @@
 </head>
 <body>
 <canvas id="cv"></canvas>
-<audio id="mus" src="music.mp3" loop preload="auto"></audio>
+<audio id="mus" src="music-v2.mp3" loop preload="auto"></audio>
 
 <div id="hud">
   <button id="bPause" aria-label="Duraklat"><i></i><i></i></button>
@@ -273,7 +273,7 @@ const sfx={
   tap(){beep(660,660,.05,'sine',.04)},
   bad(){beep(200,120,.25,'square',.06)}
 };
-const mus=$('mus');mus.volume=.5;
+const mus=$('mus');mus.volume=1;
 function syncMusic(){
   try{
     if(save.mus&&!document.hidden){if(mus.paused){const p=mus.play();if(p&&p.catch)p.catch(()=>{})}}
